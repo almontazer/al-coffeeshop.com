@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>☕ AEJ COFFEE Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <h1>☕ AEJ Coffee Shop</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Welcome to Our Coffee Shop</h2>
+      <p>Where every cup is a new experience.</p>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+      <div class="menu-item">
+        <img src="espresso.jpg" alt="Espresso">
+        <h3>Espresso</h3>
+        <p>Strong, black coffee.</p>
+        <button onclick="addToCart('Espresso', 3)">Add to Cart - $3.00</button>
+      </div>
+      <div class="menu-item">
+        <img src="coffee.png" alt="Latte">
+        <h3>Latte</h3>
+        <p>Espresso with steamed milk.</p>
+        <button onclick="addToCart('Latte', 4)">Add to Cart - $4.00</button>
+      </div>
+      <div class="menu-item">
+        <img src="cappuccino.jpg" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p>Espresso, steamed milk, and foam.</p>
+        <button onclick="addToCart('Cappuccino', 4.5)">Add to Cart - $4.50</button>
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h1>ABOUT US</h1>
+    <h1><p>AT Coffee Shop, we believe in brewing the finest coffee and providing a welcoming atmosphere for all coffee lovers. Our beans are sourced from the best farms and roasted to perfection :) </p></h1>
+  </section>
+
+  
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Drop us a message below:</p>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+    <p>If you have any questions, feel free to reach us at <a href="mailto:al@coffeeshop.com">al@coffeeshop.com</a></p>
+</section>
+   
+  </section>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+      <span class="close" onclick="toggleCart()">×</span>
+      <h2>Your Cart</h2>
+      <ul id="cart-items">
+        <!-- Cart items will appear here -->
+      </ul>
+      <p>Total: $<span id="total-price">0.00</span></p>
+      <button id="checkout-btn">Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
